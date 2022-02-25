@@ -22,14 +22,14 @@ body {
 
 .hero h1 {
     color: #fff;
-    font-size: 60px;
+    font-size: clamp(30px, 10vw, 60px);
     text-align: center;
     font-family: var(--ff-medium);
 }
 
 .hero h3 {
     color: #fff;
-    font-size: 40px;
+    font-size: clamp(20px, 10vw, 40px);
     margin-top: -30px;
     text-align: center;
 }
@@ -195,16 +195,16 @@ body {
     width: 100%;
     padding: 20px 50px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    place-items: center;
 }
 
 .que-es-ga .que-es-info {
-    width: 50%;
-    flex-basis: 300px;
-    flex-grow: 1;
+    /* width: 50%; */
+    /* flex-basis: 300px; */
+    /* flex-grow: 1; */
 
     display: flex;
     justify-content: center;
@@ -223,8 +223,6 @@ body {
 }
 
 .que-es-ga .que-es-logo {
-    width: 50%;
-    flex-basis: 300px;
     flex-grow: 1;
     padding: 50px 0;
 
@@ -247,6 +245,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .publi-cidi-compu .publi-info-compu {
@@ -410,8 +409,9 @@ body {
     width: 100%;
     padding: 20px 100px;
 
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    place-items: center;
     gap: 80px;
 }
 
